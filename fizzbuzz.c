@@ -3,11 +3,8 @@
 
 int main(void) {
     for (unsigned i = 1; i <= 100; ++i) {
-        unsigned fizz = ~!(i % 3) + 1 << 16;;
-        unsigned buzz = ~!(i % 5) + 1 & 0x0000ffff;
-
-        fizz = ~(fizz >> 31) + 1;
-        buzz = ~(buzz >> 15) + 1;
+        unsigned fizz = ~!(i % 3) + 1;
+        unsigned buzz = ~!(i % 5) + 1;
 
         unsigned fizzbuzz = fizz & buzz;
 
